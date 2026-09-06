@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #05070d;
+  color: #eaf0fb;
+}
+
+::selection {
+  background: rgba(47, 107, 255, 0.35);
+  color: #ffffff;
+}
+
+/* Thin, quiet scrollbar that fits the theme */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #05070d;
+}
+::-webkit-scrollbar-thumb {
+  background: #1b2740;
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #2f6bff;
+}
+
+.glass {
+  background: rgba(10, 15, 28, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* Visible keyboard focus everywhere, styled to match the theme */
+:focus-visible {
+  outline: 2px solid #5c8dff;
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
