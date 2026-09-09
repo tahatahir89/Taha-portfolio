@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Reveal from "@/components/ui/Reveal";
 import SectionHeading from "@/components/ui/SectionHeading";
 
@@ -48,8 +49,27 @@ export default function About() {
             </p>
           </Reveal>
 
-          <Reveal delay={0.1}>
-            <div className="grid grid-cols-2 gap-4">
+          <Reveal delay={0.1} className="flex flex-col items-center lg:items-end">
+            <div className="relative mb-8 h-44 w-44 shrink-0 sm:h-52 sm:w-52">
+              <Image
+                src="/images/portrait-formal.jpg"
+                alt="Muhammad Taha"
+                fill
+                sizes="(min-width: 640px) 208px, 176px"
+                className="rounded-full object-cover shadow-glow-purple-lg"
+              />
+              <div className="absolute -bottom-2 -right-2 h-16 w-16 overflow-hidden rounded-full border-4 border-base shadow-glow-purple sm:h-20 sm:w-20">
+                <Image
+                  src="/images/portrait-casual.jpg"
+                  alt="Muhammad Taha at his desk"
+                  fill
+                  sizes="80px"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+
+            <div className="grid w-full grid-cols-2 gap-4">
               {facts.map((fact) => (
                 <div
                   key={fact.label}
@@ -68,3 +88,4 @@ export default function About() {
     </section>
   );
 }
+

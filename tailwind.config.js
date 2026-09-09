@@ -41,6 +41,8 @@ module.exports = {
       boxShadow: {
         glow: "0 0 0 1px rgba(47,107,255,0.25), 0 0 40px -10px rgba(47,107,255,0.55)",
         "glow-sm": "0 0 0 1px rgba(47,107,255,0.2), 0 0 18px -6px rgba(47,107,255,0.5)",
+        "glow-purple": "0 0 0 2px rgba(168,85,247,0.55), 0 0 26px -4px rgba(168,85,247,0.75)",
+        "glow-purple-lg": "0 0 0 3px rgba(168,85,247,0.5), 0 0 55px -10px rgba(168,85,247,0.8)",
       },
       keyframes: {
         marquee: {

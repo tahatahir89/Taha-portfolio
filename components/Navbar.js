@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
@@ -54,8 +55,18 @@ export default function Navbar() {
       }`}
     >
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 lg:px-8">
-        <Link href="#home" className="font-display text-lg font-semibold text-white">
-          M<span className="text-signal-bright">.Taha</span>
+        <Link href="#home" className="flex items-center gap-2.5">
+          <Image
+            src="/images/avatar-formal.jpg"
+            alt="Muhammad Taha"
+            width={40}
+            height={40}
+            className="h-8 w-8 shrink-0 rounded-full object-cover shadow-glow-purple sm:h-9 sm:w-9"
+            priority
+          />
+          <span className="font-display text-lg font-semibold text-white">
+            M<span className="text-signal-bright">.Taha</span>
+          </span>
         </Link>
 
         <ul className="hidden items-center gap-1 lg:flex">
